@@ -1,0 +1,9 @@
+@import "react-toastify/dist/ReactToastify.css";
+.App {
+  margin: 0 auto;
+  @apply px-5 xl:px-0 bg-black;
+}
+
+.Toastify__progress-bar {
+  background-color: #6cc551 !important;
+}
