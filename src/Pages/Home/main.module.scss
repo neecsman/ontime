@@ -1,5 +1,5 @@
 h2 {
-  @apply text-black text-center leading-tight;
+  @apply text-white text-5xl text-center leading-tight font-bold;
   font-size: 2.5rem;
 }
 section {
@@ -19,46 +19,46 @@ section {
   &__container {
     @apply flex flex-wrap justify-center xl:justify-between max-w-7xl bg-white rounded-3xl;
     max-width: 1440px;
-    // max-height: 550px;
     margin: 0 auto;
+    margin-top: 70px;
     &_left {
-      @apply flex flex-col items-center text-center xl:text-start xl:items-start p-24;
+      @apply flex flex-col items-center justify-center text-center xl:text-start xl:items-start p-24;
       max-width: 600px;
 
       h1 {
-        @apply text-black leading-none;
+        @apply text-black leading-none font-bold;
         font-size: 3.5rem;
         @media (max-width: 500px) {
           font-size: 2rem;
         }
       }
       p {
-        @apply text-black opacity-60 py-14;
-        font-size: 1.25rem;
+        @apply text-black opacity-60 py-14 text-lg;
       }
     }
     &_right {
       @apply flex flex-col items-center text-center bg-black;
-      max-width: 500px;
+      max-width: 600px;
     }
   }
 }
 
 .advantages {
+  @apply mt-24;
   h2 {
-    @apply text-center text-white;
+    @apply text-center text-white text-5xl;
   }
   &_block {
     margin-top: 3.5rem;
     @apply flex flex-wrap justify-center w-full text-black text-center rounded-3xl py-10 px-24;
     & > div {
-      @apply shadow-md rounded-xl bg-white border-lightgray border p-10 mx-4;
+      @apply shadow-md rounded-xl bg-white border-lightgray border p-16 mx-4;
       width: 307px;
       & > h3 {
-        @apply text-3xl font-medium;
+        @apply text-3xl font-bold;
       }
       & > p {
-        @apply text-xl opacity-80 mt-6;
+        @apply text-sm opacity-80 mt-6;
       }
     }
   }
@@ -66,22 +66,11 @@ section {
 
 .region {
   @apply flex flex-wrap justify-center items-center;
-  h2 {
-    @apply text-start;
-  }
-  &_left {
-    max-width: 600px;
-  }
-  &_right {
-    @apply p-28 mr-28;
-    max-width: 600px;
-
-    ul {
-      @apply mt-14;
-      li {
-        @apply relative left-10 text-black text-xl text-opacity-60 before:content-[''] before:absolute before:w-4 before:h-4 before:bg-green before:rounded-full before:-left-10 before:top-4;
-        line-height: 3rem;
-      }
+  &_map {
+    max-width: 940px;
+    margin-top: 100px;
+    img {
+      @apply w-full;
     }
   }
 }
@@ -127,16 +116,49 @@ section {
 
 .how {
   &_container {
-    @apply flex flex-wrap justify-center;
+    @apply flex flex-wrap justify-center py-20;
 
     &_item {
-      @apply bg-white  px-10 py-9 rounded-xl m-5;
-      max-width: 510px;
+      @apply relative bg-black p-8 rounded-xl m-1;
+      max-width: 270px;
       h3 {
-        @apply text-green font-medium text-3xl;
+        @apply text-white font-bold text-2xl;
       }
       p {
-        @apply opacity-60 text-xl mt-6;
+        @apply opacity-60 mt-6 text-white;
+      }
+      &::after {
+        position: absolute;
+        content: url("../../img/arrow.svg");
+        right: -28px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        width: 48px;
+        height: 48px;
+        background: #ffd057;
+        border: 3px solid #fff;
+        border-radius: 100%;
+        padding: 10px;
+
+        @media (max-width: 600px) {
+          position: absolute;
+          content: url("../../img/arrow.svg");
+          right: 40%;
+          top: 90%;
+          transform: translateX(50%);
+          transform: rotate(90deg);
+          z-index: 1;
+          width: 48px;
+          height: 48px;
+          background: #ffd057;
+          border: 3px solid #fff;
+          border-radius: 100%;
+          padding: 10px;
+        }
+      }
+      &:last-child::after {
+        display: none;
       }
     }
   }
@@ -146,20 +168,20 @@ section {
   &_container {
     @apply flex flex-wrap justify-center mt-20;
     &_item {
-      @apply border border-gray rounded-xl shadow-md m-5;
+      @apply rounded-xl overflow-hidden shadow-md m-5;
       width: 387px;
       &_header {
-        @apply border-b border-lightgray p-10;
+        @apply bg-yellow p-10;
 
         h3 {
           @apply text-3xl font-medium text-center;
         }
       }
       &_body {
-        @apply p-10;
+        @apply p-10 bg-white h-full;
         ul {
           li {
-            @apply relative left-10 text-black text-xl text-opacity-80 before:content-[''] before:absolute before:w-4 before:h-4 before:bg-green before:rounded-full before:-left-10 before:top-4;
+            @apply relative left-10 text-black text-base text-opacity-80 before:content-[''] before:absolute before:w-1 before:h-1 before:bg-black before:rounded-full before:-left-10 before:top-4;
             line-height: 3rem;
           }
         }
@@ -174,14 +196,16 @@ section {
 
 .payments {
   &_container {
-    @apply flex flex-wrap justify-between items-center bg-gray rounded-xl p-10 py-32;
+    @apply flex flex-wrap justify-between items-center bg-white rounded-3xl overflow-hidden;
 
     &_block {
       margin: 0 auto;
       max-width: 600px;
-
+      h2 {
+        @apply text-black;
+      }
       p {
-        @apply text-black text-xl mt-14 leading-8 opacity-80;
+        @apply text-black text-base mt-14 leading-8 opacity-80;
       }
 
       &_pay {

@@ -9,6 +9,6 @@ body {
 
 body {
   position: relative;
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
   @apply m-0 text-[14px];
 }
