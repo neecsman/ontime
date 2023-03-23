@@ -1,5 +1,5 @@
 .footer {
-  @apply flex flex-wrap justify-between text-black py-10;
+  @apply flex flex-wrap justify-between text-white py-10;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -30,7 +30,7 @@
       @apply h-full flex flex-col justify-between;
 
       li {
-        @apply mx-1 cursor-pointer opacity-60 hover:text-green hover:opacity-100;
+        @apply mx-1 cursor-pointer opacity-60 hover:text-yellow hover:opacity-100;
       }
     }
   }

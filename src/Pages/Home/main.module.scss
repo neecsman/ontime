@@ -75,45 +75,6 @@ section {
   }
 }
 
-.delivery {
-  @apply flex flex-col items-center;
-  &_container {
-    @apply flex flex-wrap justify-center mt-14 max-w-7xl;
-    & > div {
-      @apply m-5 py-14 px-8 rounded-xl bg-gray flex flex-col items-center justify-end;
-      height: 328px;
-      width: 330px;
-      p {
-        @apply text-3xl text-white;
-      }
-    }
-  }
-  &_clothes {
-    background-image: url("../../img/delivery/clothes.png");
-    background-size: cover;
-  }
-  &_docs {
-    background-image: url("../../img/delivery/docs.png");
-    background-size: cover;
-  }
-  &_products {
-    background-image: url("../../img/delivery/products.png");
-    background-size: cover;
-  }
-  &_gifts {
-    background-image: url("../../img/delivery/gifts.png");
-    background-size: cover;
-  }
-  &_medical {
-    background-image: url("../../img/delivery/medical.png");
-    background-size: cover;
-  }
-  &_internet {
-    background-image: url("../../img/delivery/internet.png");
-    background-size: cover;
-  }
-}
-
 .how {
   &_container {
     @apply flex flex-wrap justify-center py-20;
@@ -196,16 +157,25 @@ section {
 
 .payments {
   &_container {
-    @apply flex flex-wrap justify-between items-center bg-white rounded-3xl overflow-hidden;
-
-    &_block {
+    @apply flex flex-wrap justify-between bg-white rounded-3xl overflow-hidden;
+    max-height: 600px;
+    &_left {
+      img {
+        height: 600px;
+        width: 527px;
+        object-fit: cover;
+      }
+    }
+    &_right {
+      @apply flex flex-col justify-center;
       margin: 0 auto;
       max-width: 600px;
+
       h2 {
-        @apply text-black;
+        @apply text-black text-6xl;
       }
       p {
-        @apply text-black text-base mt-14 leading-8 opacity-80;
+        @apply text-black text-base mt-14 leading-8 opacity-80 text-center;
       }
 
       &_pay {
@@ -215,12 +185,40 @@ section {
           @apply flex flex-col items-center;
 
           img {
-            width: 160px;
+            width: 80px;
           }
 
           span {
             @apply text-2xl font-medium mt-8;
           }
+        }
+      }
+    }
+  }
+}
+
+.delivery {
+  @apply flex flex-col items-center;
+  &_container {
+    @apply flex flex-wrap justify-center mt-14 max-w-7xl;
+    &_item {
+      @apply m-5 rounded-xl bg-gray flex flex-col items-center;
+      height: 448px;
+      width: 362px;
+
+      &_photo {
+        height: 280px;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+
+      &_desc {
+        @apply px-20 py-8 text-center;
+        h3 {
+          @apply text-xl font-bold mb-4;
         }
       }
     }

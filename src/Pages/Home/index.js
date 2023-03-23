@@ -11,6 +11,8 @@ import cash from "../../img/cash.png";
 import card from "../../img/card.png";
 import payment from "../../img/payment.png";
 
+import clothes from "../../img/delivery/clothes.png";
+
 const Home = () => {
   return (
     <>
@@ -144,16 +146,16 @@ const Home = () => {
       </section>
       <section className={style.payments}>
         <div className={style.payments_container}>
-          <div>
+          <div className={style.payments_container_left}>
             <img src={payment} alt="Payment" />
           </div>
-          <div className={style.payments_container_block}>
+          <div className={style.payments_container_right}>
             <h2>Способы оплаты</h2>
             <p>
               Выберите удобный для себя способ оплаты и <br /> оплатите доставку
               при передачи груза курьеру.
             </p>
-            <div className={style.payments_container_block_pay}>
+            <div className={style.payments_container_right_pay}>
               <div>
                 <img src={cash} alt="Наличными" />
                 <span>Наличными</span>
@@ -169,23 +171,14 @@ const Home = () => {
       <section id="delivery" className={style.delivery}>
         <h2>Виды доставки</h2>
         <div className={style.delivery_container}>
-          <div className={style.delivery_clothes}>
-            <p>Одежда</p>
-          </div>
-          <div className={style.delivery_docs}>
-            <p>Документы</p>
-          </div>
-          <div className={style.delivery_products}>
-            <p>Продукты</p>
-          </div>
-          <div className={style.delivery_gifts}>
-            <p>Подарки</p>
-          </div>
-          <div className={style.delivery_medical}>
-            <p>Лекарства</p>
-          </div>
-          <div className={style.delivery_internet}>
-            <p>Интернет-заказы</p>
+          <div className={style.delivery_container_item}>
+            <div className={style.delivery_container_item_photo}>
+              <img src={clothes} alt="Одежда" />
+            </div>
+            <div className={style.delivery_container_item_desc}>
+              <h3>Одежда</h3>
+              <p>Доставка одежды из интернет-магазинов</p>
+            </div>
           </div>
         </div>
       </section>
