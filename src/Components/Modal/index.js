@@ -11,7 +11,7 @@ const Modal = ({ active, setActive, children }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <button
-          className="text-5xl absolute right-4 top-1 hover:text-green"
+          className="text-5xl absolute right-4 top-1 hover:text-yellow"
           onClick={() => setActive(false)}
         >
           &times;

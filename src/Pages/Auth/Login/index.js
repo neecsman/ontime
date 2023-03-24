@@ -48,7 +48,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-[500px]">
+    <div className="flex flex-col justify-center items-center lg:h-[800px]">
       {isLoading ? (
         <Loading />
       ) : (
@@ -85,10 +85,10 @@ const Login = () => {
           </div>
 
           <div className="flex justify-between text-white text-opacity-60 mt-4">
-            <Link className="hover:text-green text-black" to="/registration">
+            <Link className="hover:text-yellow text-black" to="/registration">
               Регистрация
             </Link>
-            <Link className="hover:text-green text-black" to="/recovery">
+            <Link className="hover:text-yellow text-black" to="/recovery">
               Забыл пароль?
             </Link>
           </div>

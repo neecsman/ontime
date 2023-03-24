@@ -156,10 +156,10 @@ const Registration = () => {
             <Button auth>Зарегистрироваться</Button>
           </div>
           <div className="flex justify-between text-white text-opacity-60 mt-4 px-2">
-            <Link className="hover:text-green text-black" to="/login">
+            <Link className="hover:text-yellow text-black" to="/login">
               Вход
             </Link>
-            <Link className="hover:text-green text-black" to="/recovery">
+            <Link className="hover:text-yellow text-black" to="/recovery">
               Забыл пароль?
             </Link>
           </div>
@@ -168,7 +168,7 @@ const Registration = () => {
               Нажимая кнопку "Зарегистрироваться", Вы соглашаетесь с{" "}
               <a
                 className="hover:underline"
-                href="https://fastpoints.ru/docs/privacy.pdf"
+                href="https://on-time.su/docs/privacy.pdf"
               >
                 политикой обработки персональных данных.
               </a>

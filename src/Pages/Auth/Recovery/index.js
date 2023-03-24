@@ -42,7 +42,7 @@ const Recovery = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-[500px]">
+    <div className="flex flex-col justify-center items-center lg:h-[800px]">
       <form className={style.form} onSubmit={handleSubmit(onSubmit)}>
         <h1 className="text-black text-center text-3xl mb-6">
           Восстановление пароля
@@ -65,7 +65,7 @@ const Recovery = () => {
         </div>
 
         <div className="flex justify-between text-white text-opacity-60 mt-4">
-          <Link className="hover:text-green text-black" to="/login">
+          <Link className="hover:text-yellow text-black" to="/login">
             Войти
           </Link>
         </div>

@@ -2,7 +2,7 @@
   @apply block xl:hidden float-left outline-none border-none p-3 bg-none;
 
   span {
-    @apply transition-all block w-9 h-1 mt-2 bg-green;
+    @apply transition-all block w-9 h-1 mt-2 bg-yellow;
   }
 
   &:hover {

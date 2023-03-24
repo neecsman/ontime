@@ -12,6 +12,11 @@ import card from "../../img/card.png";
 import payment from "../../img/payment.png";
 
 import clothes from "../../img/delivery/clothes.png";
+import product from "../../img/delivery/product.png";
+import gift from "../../img/delivery/gift.png";
+import docs from "../../img/delivery/docs.png";
+import medician from "../../img/delivery/medician.png";
+import all from "../../img/delivery/all.png";
 
 const Home = () => {
   return (
@@ -178,6 +183,51 @@ const Home = () => {
             <div className={style.delivery_container_item_desc}>
               <h3>Одежда</h3>
               <p>Доставка одежды из интернет-магазинов</p>
+            </div>
+          </div>
+          <div className={style.delivery_container_item}>
+            <div className={style.delivery_container_item_photo}>
+              <img src={product} alt="Продукты" />
+            </div>
+            <div className={style.delivery_container_item_desc}>
+              <h3>Продукты</h3>
+              <p>Доставка продуктов до дверей в термосумках</p>
+            </div>
+          </div>
+          <div className={style.delivery_container_item}>
+            <div className={style.delivery_container_item_photo}>
+              <img src={gift} alt="Подарки" />
+            </div>
+            <div className={style.delivery_container_item_desc}>
+              <h3>Подарки</h3>
+              <p>Доставка подарков для близких и знакомых</p>
+            </div>
+          </div>
+          <div className={style.delivery_container_item}>
+            <div className={style.delivery_container_item_photo}>
+              <img src={docs} alt="Документы" />
+            </div>
+            <div className={style.delivery_container_item_desc}>
+              <h3>Документы</h3>
+              <p>Доставка документов в целости и сохранности</p>
+            </div>
+          </div>
+          <div className={style.delivery_container_item}>
+            <div className={style.delivery_container_item_photo}>
+              <img src={medician} alt="Лекарства" />
+            </div>
+            <div className={style.delivery_container_item_desc}>
+              <h3>Лекарства</h3>
+              <p>Доставим медикаменты в самые короткие сроки</p>
+            </div>
+          </div>
+          <div className={style.delivery_container_item}>
+            <div className={style.delivery_container_item_photo}>
+              <img src={all} alt="Все, что угодно" />
+            </div>
+            <div className={style.delivery_container_item_desc}>
+              <h3>Все, что угодно</h3>
+              <p>Доставка любых товаров на ваш вкус </p>
             </div>
           </div>
         </div>
